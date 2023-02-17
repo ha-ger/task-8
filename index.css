@@ -1,0 +1,136 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --main-color: #19193c;
+}
+
+body {
+    background-color: black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+ min-height: 100vh;
+  user-select: none;
+}
+
+body:after{
+    content:"";
+    background-color: #b508134f;
+    width:100%;
+    height: 50vh;
+    top:50%;
+    left:0;
+    position: absolute;
+}
+.calc {z-index: 1000;
+  background: var(--main-color);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 15px 15px;
+}
+
+h1 {
+  color: wheat;
+}
+
+.result {
+  margin: 10px 0px 0px;
+  width: 100%;
+  height: 40px;
+  display: flex;
+  justify-content: flex-end;
+}
+
+input {
+    background-color: transparent;
+    box-shadow: -1px 0px 3px 0px rgb(226 220 220 / 10%),
+    1px 1px 5px rgb(255 141 40 / 20%);
+    letter-spacing: 5;
+  border: none;
+  outline: none;
+  text-align: right;
+  border: 1px solid #f5deb345;
+  font-size: 17px;
+  font-weight: 700;
+  width: 100%;
+  padding-right: 7px;
+  color: wheat;
+  letter-spacing: 1.8px;
+}
+
+.buttons {
+  max-width: 100%;
+  margin-top: 15px;
+}
+
+.buttons button {
+    -webkit-tap-highlight-color: transparent;
+  width: 60px;
+  justify-content: center;
+  align-items: center;
+  height: 40px;
+  border-radius: 15px;
+  margin: 5px;
+  font-size: 17px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s;
+  outline: none;
+  background-color: transparent;
+  color: wheat;
+  border: none;
+  box-shadow: -1px 0px 3px 0px rgb(255 255 255 / 10%),
+    5px 5px 5px rgb(0 0 0 / 20%);
+}
+
+.buttons button:hover:not(.buttons .equal, .buttons .Ac) {
+  box-shadow: 0px 0px 5px 2px #f6d18ce3;
+  box-shadow: 0px 0px 5px 2px wheat;
+}
+
+.buttons div {
+  display: flex;
+}
+
+.buttons .Ac {
+  flex: 1;
+  background-color: #ff0000ad;
+}
+
+.buttons .equal {
+  flex: 1;
+  background-color: #2fa260;
+}
+
+.star {
+  padding-top: 10px;
+}
+
+.decimal {
+  padding-bottom: 8px;
+}
+
+@media(max-width:280px){
+
+
+    .buttons button {
+        
+        width: 42px;
+       
+    }
+    .result {
+    
+        width: 87%;
+       
+    }
+
+
+
+}
